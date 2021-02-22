@@ -79,9 +79,7 @@ function Lang(what)
 end
 
 function Notify(message) -- However you want your notifications to be shown, you can switch it up here.
-	SetNotificationTextEntry("STRING")
-    AddTextComponentString(message)
-    DrawNotification(0,1)
+	exports.pNotify:SendNotification({text = message, type = "info", timeout = 3000})			
 end
 
 function IsMpPed(ped)
