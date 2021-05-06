@@ -155,6 +155,7 @@ local function PlayToggleEmote(e, cb)
 end
 
 function ResetClothing(anim)
+	TriggerEvent('master_weapons:resetBag')
 	local Ped = PlayerPedId()
 	local e = Drawables.Top.Emote
 	if anim then TaskPlayAnim(Ped, e.Dict, e.Anim, 3.0, 3.0, 3000, e.Move, 0, false, false, false) end
@@ -181,6 +182,15 @@ function ToggleClothing(which, extra)
 	if which ~= "Mask" then
 		if not Gender then Notify(Lang("NotAllowedPed")) return false end -- We cancel the command here if the person is not using a multiplayer model.
 	end
+	
+	if which == "Bagoff" then
+		if not LastEquipped[which] then
+			TriggerEvent('master_weapons:setBag', false)
+		else
+			TriggerEvent('master_weapons:setBag', true)
+		end
+	end
+	
 	local Table = Toggle.Table[Gender]
 	if not Toggle.Table.Standalone then -- "Standalone" is for things that dont require a variant, like the shoes just need to be switched to a specific drawable. Looking back at this i should have planned ahead, but it all works so, meh!
 		for k,v in pairs(Table) do

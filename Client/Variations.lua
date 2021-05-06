@@ -78,9 +78,13 @@ Citizen.CreateThread(function()
 	AddNewVariation("Visor", "Female", 126, 127)
 	AddNewVariation("Visor", "Female", 129, 130)
 	-- Male Bags
+	AddNewVariation("Bags", "Male", 86, 85)
+	AddNewVariation("Bags", "Male", 82, 81)
 	AddNewVariation("Bags", "Male", 45, 44)
 	AddNewVariation("Bags", "Male", 41, 40)
 	-- Female Bags
+	AddNewVariation("Bags", "Female", 86, 85)
+	AddNewVariation("Bags", "Female", 82, 81)
 	AddNewVariation("Bags", "Female", 45, 44)
 	AddNewVariation("Bags", "Female", 41, 40)
 	-- Male Hair
