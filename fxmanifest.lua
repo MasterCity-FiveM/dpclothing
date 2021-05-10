@@ -2,6 +2,7 @@ fx_version 'bodacious'
 game 'gta5'
 author 'dullpear'
 version '1.0.3'
+
 description 'dpClothing+'
 
 client_scripts {
